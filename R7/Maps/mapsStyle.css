@@ -1,0 +1,552 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient( rgba(0, 0, 0, 0.513), rgba(0, 0, 0, 0.513) ), url('../img/background/nightBg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.logoBg{
+    background-color: rgb(22, 22, 22);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    opacity: 0.95;
+}
+.logo img{
+    display: block;
+    margin: auto;
+    width: 7vw;
+}
+
+.navbar{
+    opacity: 0.95;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 6vw;
+    z-index: 10;
+}
+
+
+.navbar a{
+    color: white;
+    background: black;
+    height: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.navbar li{
+    list-style: none;
+    width: 100%;
+}
+
+.left{
+    float: left;
+    width: 70%;
+}
+
+.right{
+    float: right;
+    width: 30%;
+}
+
+.left .dropdowniconX .iconX img{
+    display: flex;
+    align-items: center;
+    width: 3vw;
+    filter: invert(1);
+}
+
+.navbar a:hover{
+    background-color: lightblue;
+    color: black;
+    transition: 0.3s;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.left li ul{
+    transition: opacity 0.3s ease-in;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 17.5%;
+}
+
+.left li:hover ul{
+    opacity: 1;
+    height: auto;
+    display: block;
+}
+
+.login-bg, .regis-bg{
+    position: fixed;
+    z-index: 60; 
+    left: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow: hidden;
+}
+.popup-login, .popup-regis{
+    width: 30vw;
+    height: 45vw;
+    background-color: rgb(44, 42, 42);
+    margin: auto;
+    position: relative;
+    box-shadow: 20px 20px 10px rgb(0, 0, 0);
+}
+.logor7{
+    margin-top: 3.5vw;
+    text-align: center;
+}
+.logor7 img{
+    width: 12vw;
+}
+.popup-login input, .popup-regis input{
+    width: 80%;
+    height: 2.5vw;
+    outline: none;
+    font-size: 1.5vw;
+    border: none;
+}
+.username, .password, .address, .email{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vw;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    font-size: 1.3vw;
+}
+.checkbox input{
+    width: 1.3vw;
+}
+.checkbox label{
+    color: white;
+    padding-left: 1vw;
+}
+.submit-button{
+    padding-top: 1vw;
+    width: 80%;
+    margin: auto;
+}
+.submit-button button{
+    width: 100%;
+    height: 3vw;
+    cursor: pointer;
+    font-size: 2vw;
+    letter-spacing: 0.5vw;
+    font-weight: 550;
+    border: none;
+    transition: 0.3s;
+}
+.submit-button button:hover{
+    background-color: black;
+    color: white;
+    border: 2px solid lightblue;
+}
+.close-login, .close-regis{
+    position: absolute;
+    right: 1vw;
+    font-size: 4vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-login:hover, .close-regis:hover{
+    color: red;
+}
+.anotherway-login{
+    padding-top: 1vw;
+    margin: 2vw;
+    pointer-events: none;
+    font-size: 1.6vw;
+    text-align: center;
+    color: white;
+}
+.anotherway-login-img{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.anotherway-login-img img:hover{
+    filter: invert(1);
+}
+
+.title{
+    position: relative;
+    color: white;
+    font-size: 20px;
+    margin-top: 5vw;
+    pointer-events: none;
+}
+
+.title h1, .title p, .title hr{
+    position: relative;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+
+.listMapTitle h1{
+    color: white;
+    text-align: center;
+    pointer-events: none;
+}
+
+#btnContainer{
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 37%;
+    margin: auto;
+}
+
+#btnContainer .btn{
+    width: 100%;
+    margin: 10px;
+    padding: 1vw 2vw;
+    font-size: 1.3vw;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: 2px solid lightblue;
+    cursor: pointer;
+    outline: none;
+}
+#btnContainer .btn:hover{
+    background-color: rgb(127, 223, 255);
+    color: black;
+}
+#btnContainer .btn.active{
+    background-color: white;
+    color: black;
+}
+
+.containerImg{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.filterDiv{
+    display: none;
+    position: relative;
+}
+
+.filterDiv img{
+    background-color: #2196F3;
+    color: #ffffff;
+    margin: 15px;
+    border: 1px solid lightblue;
+    position: inherit;
+    cursor: pointer;
+    width: 25vw;
+    height: auto;
+}
+
+.filterDiv h1{
+    position: absolute;
+    top: 7vw;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    pointer-events: none;
+    opacity: 0;
+    font-size: 3vw;
+    align-items: center;
+    justify-content: center;
+}
+.filterDiv img:hover + h1{
+    transition: 0.3s;
+    opacity: 1;
+}
+
+.filterDiv img:hover{
+    filter: brightness(30%);
+    transition: 0.3s;
+    border: 1px solid lightblue;
+}
+.show{
+    display: block;
+}
+
+#container1, #container2, #container3 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 100;
+    background-color: rgb(20, 20, 20); 
+    width: 91vw;
+    height: 45vw; 
+}
+  
+.reveal-modal1, .reveal-modal2, .reveal-modal3{
+    position: relative;
+    color: white;
+    background: url("../img/maps/map-bank/map-header-bank.jpg") no-repeat center;
+    height: 30vw;
+    display: flex;
+}
+.reveal-modal2{
+    background: url("../img/maps/map-border/map-header-border.jpg") no-repeat center;
+}
+.reveal-modal3{
+    background: url("../img/maps/map-chalet/map-header-chalet.jpg") no-repeat center;
+}
+.mapBox{
+    background-color: rgba(0, 0, 0, 0.815);
+    width: 70vw;
+    margin: auto;
+    height: 25vw;
+    display: flex;
+    align-items: center;
+}
+.text-map{
+    padding-left: 0.7vw;
+    width: 50%;
+    letter-spacing: 0.1vw;
+    pointer-events: none;
+}
+.text-map h2{
+    font-size: 4vw;
+    text-align: center;
+}
+.text-map h3{
+    font-size: 1.6vw;
+    color: lightblue;
+}
+.text-map hr{
+    padding-bottom: 0.2vw;
+    background-color: lightblue;
+    margin-bottom: 0.3vw;
+    width: 100%;
+}
+.text-map span{
+    font-size: 1.3vw;
+    color: white;
+}
+.blueprint-map{
+    background-image: linear-gradient(rgba(29, 26, 26, 0.171),black);
+    height: 15vw;
+}
+.list-blueprint{
+    display: flex;
+    justify-content: space-evenly;
+}
+.list-blueprint img{
+    width: 18vw;
+    margin-top: 0.5vw;
+    border: 0.2vw solid transparent;
+}
+.list-blueprint h2{
+    color: white;
+    font-size: 1.2vw;
+    text-align: center;
+    pointer-events: none;
+}
+.basement, .ground, .firstfloor, .roof{
+    margin-top: 1vw;
+}
+.map-gif img{
+    width: 34vw;   
+    height: 23.5vw;
+    margin-left: 0.5vw;
+}
+.hide{
+    cursor: pointer;
+    position: absolute;
+    right: 1.5vw;
+    font-weight: bolder;
+    font-size: 5vw;
+    color: white;
+}
+.hide:hover{
+    color: red;
+}
+.footerPart{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.socialMedia{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.part1 .socialMedia .twitter,
+.part1 .socialMedia .facebook,
+.part1 .socialMedia .twitch,
+.part1 .socialMedia .instagram{
+    padding: 1px 1px;
+    border: 1px solid transparent;
+    transition: 0.3s ease-in;
+    height: 50px;
+}
+
+.part1 .socialMedia .twitter:hover,
+.part1 .socialMedia .instagram:hover,
+.part1 .socialMedia .facebook:hover,
+.part1 .socialMedia .twitch:hover{
+    transform: scale(1.3);
+    border: 1px solid lightblue;
+}
+
+.part1 h3{
+    color: white;
+    font-size: 35px;
+    pointer-events: none;
+}
+
+.part2{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.part2 .license, .part2 .partner{
+    display: flex;
+    justify-content: space-around;
+}
+
+.part2 .license img:hover, .part2 .partner img:hover{
+    filter: brightness(70%);
+}
+
+.Cpborder{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    height: 100px;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+}
+
+.Cpborder p{
+    position: absolute;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px){
+    .filterDiv img{
+        width: 65vw;
+        height: auto;
+    }
+    .containerImg{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .filterDiv h1{
+        font-size: 5vw;
+        top: 10vw;
+    }
+    .title p{
+        font-size: 10px;
+    }
+    .title h1, .listMapTitle h1{
+        font-size: 20px;
+    }
+    .mybr{
+        display: none;
+    }
+    #btnContainer{
+        width: 65%;
+        margin: auto
+    }
+    #container1, #container2, #container3 {
+        height: 65vw; 
+    }
+    .containerImg img{
+        width: 40vw;
+    }
+    .reveal-modal1, .reveal-modal2, .reveal-modal3{
+        background: url("../img/maps/map-bank/map-header-bank.jpg") no-repeat center;
+        height: 40vw;
+    }
+    .blueprint-map{
+        height: 25vw;
+        display: flex;
+        align-items: center;
+    }
+    .list-blueprint{
+        width: 100%;
+    }
+    .list-blueprint img{
+        width: 21vw;
+    }
+    .mapBox{
+        width: 80vw;
+        height: 35vw;
+    }
+    .map-gif img{
+        height: 30vw;
+        width: 38vw;
+    }
+    #btnContainer .btn{
+        padding: 2vw 4vw;
+    }
+    .footerPart{
+        flex-direction: column;
+    }
+    .part1 h3{
+        font-size: 20px;
+    }
+    .part1 .socialMedia .twitter,
+    .part1 .socialMedia .facebook,
+    .part1 .socialMedia .twitch,
+    .part1 .socialMedia .instagram{
+        height: 40px;
+    }
+    .part2{
+        padding-top: 30px;
+    }
+    .license, .partner{
+        flex-direction: column;
+        align-items: center;
+    }
+    .Cpborder{
+        margin-top: 10px;
+    }
+    .Cpborder p{
+        font-size: 12px;
+    }
+    .part2 img{
+        height: 75px;
+    }
+}

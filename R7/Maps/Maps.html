@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+    <link rel="stylesheet" href="./mapsStyle.css">
+    <link rel="icon" type="image/png" href="../img/r7Icon.png">
+</head>
+<body>
+    <div class="logoBg">
+        <div class="logo">
+            <img src="../img/R6Logo/R7SiegeLogo.png" alt="Logo R6">
+        </div>
+    </div>
+    <div class="navbar">
+        <ul class="left">
+            <li><a href="../Home/Home.html">HOME</a></li>
+            <li><a href="../news1/News1.html">NEWS</a></li>
+            <li class="dropdowniconX"><a href="#" onclick="return false">GAME INFO <span class="iconX"><img src="../img/dropdown.png" alt=""></span> </a>
+                <ul class="ulddX">
+                    <li><a href="../Operator/Operator.html">OPERATORS</a></li>
+                    <li><a href="../Maps/Maps.html">MAPS</a></li>
+                </ul>
+            </li>
+            <li><a href="../Preorder/preorder.html">PRE-ORDER</a></li>
+        </ul>
+        <ul class="right">
+            <li><a href="#" class="log">LOGIN</a></li>
+            <li><a href="#" class="reg">REGISTER</a></li>
+        </ul>
+    </div>
+    <div class="regis-bg">
+        <div class="popup-regis">
+            <div class="close-regis">&times;</div>
+            <div class="logor7">
+                <img src="../img/R6Logo/R7SiegeLogo.png" alt="">
+            </div>
+            <form action="">
+                <div class="email"><input type="text" placeholder="email" required></div>
+                <div class="password"><input type="text" placeholder="password" required></div>
+                <div class="username"><input type="text" placeholder="username" required></div>
+                <div class="address"><input type="text" placeholder="address" required></div>
+                <div class="checkbox">
+                    <input type="checkbox" id="mycheckbox" required>
+                    <label for="mycheckbox">I accept the Terms of Use of Ubipost</label>
+                </div>
+                <div class="submit-button">
+                    <a href=""><button>Submit</button></a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="login-bg">
+        <div class="popup-login">
+            <div class="close-login">&times;</div>
+            <div class="logor7">
+                <img src="../img/R6Logo/R7SiegeLogo.png" alt="">
+            </div>
+            <form action="">
+                <div class="username"><input type="text" placeholder="username" required></div>
+                <div class="password"><input type="text" placeholder="password" required></div>
+                <div class="checkbox">
+                    <input type="checkbox" id="mycheckbox">
+                    <label for="mycheckbox">Remember me</label>
+                </div>
+                <div class="submit-button">
+                    <a href=""><button>Submit</button></a>
+                </div>
+                <div class="anotherway-login">
+                    <h3>Or login with</h3>
+                </div>
+                <div class="anotherway-login-img">
+                    <a href="https://www.facebook.com/"><img src="../img/social-media-icon/facebook.png" alt=""></a>
+                    <a href="https://twitter.com/"><img src="../img/social-media-icon/twitter.png" alt=""></a>
+                    <a href="https://www.twitch.tv/"><img src="../img/social-media-icon/twitch.png" alt=""></a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="title">
+        <h1>KNOW YOUR MAPS</h1>
+        <br>
+        <p>New to the game, or still struggling to learn the maps and where to focus your attention? Check out these map guides to help you take your first steps in Rainbow Seven Siege!</p>
+        <br>
+        <hr>
+    </div>
+    <br><br><div class="mybr"><br><br></div>
+    <div class="listMapTitle"><h1>LIST OF THE MAPS</h1></div>
+    <div id="btnContainer">
+        <button class="btn active" id="btn-all" onclick="cekClickButtonMaps('all')"> Show all</button>
+        <button class="btn" id="btn-ranked" onclick="cekClickButtonMaps('ranked')">Ranked</button>
+        <button class="btn" id="btn-quickmatch" onclick="cekClickButtonMaps('quickmatch')">Quick Match</button>
+    </div>
+    <div class="containerImg">
+        <div class="filterDiv ranked" id="mybank">
+            <img src="../img/maps/map-bank/mapBank.jpg" id="showBank" alt="">
+            <h1 id="mapBank">BANK</h1>
+        </div>
+        <div class="filterDiv ranked quickmatch" id="myborder">
+            <img src="../img/maps/map-border/mapBorder.jpg" id="showBorder" alt="">
+            <h1 id="mapBorder">BORDER</h1>
+        </div>
+        <div class="filterDiv quickmatch" id="mychalet">
+            <img src="../img/maps/map-chalet/mapChalet.jpg" id="showChalet" alt="">
+            <h1 id="mapChalet">CHALET</h1>
+        </div>
+    </div>
+    <div id="container1">
+        <div class="reveal-modal1">
+            <span class="hide">&times;</span>
+            <div class="mapBox">
+                <div class="text-map">
+                    <h2>BANK</h2>
+                    <h3>Location: <span>LOS ANGELES, CALIFORNIA</span></h3><hr>
+                    <h3>Released: <span>Base game (December 2015)</span></h3><hr>
+                    <h3>Playlists: <span>Ranked</span></h3><hr>
+                    <span>Team Rainbow has been called to raid a major bank. The focus is on providing a sense of progression for attackers as they make their way through progressively more fortified areas of the building.</span><hr>
+                </div>
+                <div class="map-gif">
+                    <img src="../img/maps/map-bank/cinematic-bank.gif" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="blueprint-map">
+            <div class="list-blueprint">
+                <div class="basement">
+                    <h2>BASEMENT</h2>
+                    <img src="../img/maps/map-bank/map-basement-bank.jpg" alt="">
+                </div>
+                <div class="ground">
+                    <h2>GROUND</h2>
+                    <img src="../img/maps/map-bank/map-ground-bank.jpg" alt="">
+                </div>
+                <div class="firstfloor">
+                    <h2>FIRST FLOOR</h2>
+                    <img src="../img/maps/map-bank/map-firstfloor-bank.jpg" alt="">
+                </div>
+                <div class="roof">
+                    <h2>ROOF</h2>
+                    <img src="../img/maps/map-bank/map-roof-bank.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container2">
+        <div class="reveal-modal2">
+            <span class="hide">&times;</span>
+            <div class="mapBox">
+                <div class="text-map">
+                    <h2>BORDER</h2>
+                    <h3>Location: <span>MIDDLE EAST</span></h3><hr>
+                    <h3>Released: <span>Dust Line (May 2016)</span></h3><hr>
+                    <h3>Playlists: <span>Quick Match, Ranked</span></h3><hr>
+                    <span>Team Rainbow has been called in to assist the local law enforcement and regain control of the border. A mix of old and new buildings with open air pathways make this the most destructible and open planned map to date.</span><hr>
+                </div>
+                <div class="map-gif">
+                    <img src="../img/maps/map-border/cinematic-border.gif" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="blueprint-map">
+            <div class="list-blueprint">
+                <div class="ground">
+                    <h2>GROUND</h2>
+                    <img src="../img/maps/map-border/map-ground-border.jpg" alt="">
+                </div>
+                <div class="firstfloor">
+                    <h2>FIRST FLOOR</h2>
+                    <img src="../img/maps/map-border/map-firstfloor-border.jpg" alt="">
+                </div>
+                <div class="roof">
+                    <h2>ROOF</h2>
+                    <img src="../img/maps/map-border/map-roof-border.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container3">
+        <div class="reveal-modal3">
+            <span class="hide">&times;</span>
+            <div class="mapBox">
+                <div class="text-map">
+                    <h2>CHALET</h2>
+                    <h3>Location: <span>COURCHEVEL, France</span></h3><hr>
+                    <h3>Released: <span>Base game (December 2015)</span></h3><hr>
+                    <h3>Playlists: <span>Quick Match</span></h3><hr>
+                    <span>Team Rainbow has been called to raid a major bank. The focus is on providing a sense of progression for attackers as they make their way through progressively more fortified areas of the building.</span><hr>
+                </div>
+                <div class="map-gif">
+                    <img src="../img/maps/map-chalet/cinematic-chalet.gif" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="blueprint-map">
+            <div class="list-blueprint">
+                <div class="basement">
+                    <h2>BASEMENT</h2>
+                    <img src="../img/maps/map-chalet/map-basement-chalet.jpg" alt="">
+                </div>
+                <div class="ground">
+                    <h2>GROUND</h2>
+                    <img src="../img/maps/map-chalet/map-ground-chalet.jpg" alt="">
+                </div>
+                <div class="firstfloor">
+                    <h2>FIRST FLOOR</h2>
+                    <img src="../img/maps/map-chalet/map-firstfloor-chalet.jpg" alt="">
+                </div>
+                <div class="roof">
+                    <h2>ROOF</h2>
+                    <img src="../img/maps/map-chalet/map-roof-chalet.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <footer>
+        <div class="footerPart">
+            <div class="part1">
+                <h3>[ OUR SOCIAL MEDIA ]</h3>
+                <div class="socialMedia">
+                    <a href="https://twitter.com/"><img class="twitter" src="../img/social-media-icon/twitter.png" alt=""></a>
+                    <a href="https://facebook.com"><img class="facebook" src="../img/social-media-icon/facebook.png" alt=""></a>
+                    <a href="https://instagram.com/"><img class="instagram" src="../img/social-media-icon/instagram.png" alt=""></a>
+                    <a href="https://twitch.tv/"><img class="twitch" src="../img/social-media-icon/twitch.png" alt=""></a>
+                </div>
+            </div>
+            <div class="part2">
+                <div class="license">
+                    <a href="https://www.esrb.org/EPCConfirm/912/"><img class="" src="../img/license-partner/license.png" alt=""></a>
+                    <a href="https://www.esrb.org/ratings-guide/"><img class="" src="../img/license-partner/esrb.png" alt=""></a>
+                </div>
+                <div class="partner">
+                        <a href="https://www.playstation.com/en-id/"><img src="../img/license-partner/ps4Logo.png" alt=""></a>
+                        <a href="https://www.pcdigital.com.mx/"><img src="../img/license-partner/PcLogo.png" alt=""></a>
+                        <a href="https://www.xbox.com/en-WW/"><img src="../img/license-partner/XboxLogo.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="Cpborder">
+            <p>© 2015 Ubipost Entertainment. All Rights Reserved. Tom Clancy’s, Rainbow Seven, The Soldier Icon, Ubipost and the Ubipost logo are registered or unregistered trademarks of Ubipost Entertainment in the U.S. and/or other countries.</p>
+        </div>
+        <br>
+    </footer>
+    <script src="../jquery.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

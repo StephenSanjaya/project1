@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre order</title>
+    <link rel="stylesheet" href="./preorderStyle.css">
+    <link rel="icon" type="image/png" href="../img/r7Icon.png">
+</head>
+<body>
+    <div class="logoBg">
+        <div class="logo">
+            <img src="../img/R6Logo/R7SiegeLogo.png" alt="Logo R6">
+        </div>
+    </div>
+    <div class="navbar">
+        <ul class="left">
+            <li><a href="../Home/Home.html">HOME</a></li>
+            <li><a href="../news1/News1.html">NEWS</a></li>
+            <li class="dropdowniconX"><a href="#" onclick="return false">GAME INFO <span class="iconX"><img src="../img/dropdown.png" alt=""></span> </a>
+                <ul class="ulddX">
+                    <li><a href="../Operator/Operator.html">OPERATORS</a></li>
+                    <li><a href="../Maps/Maps.html">MAPS</a></li>
+                </ul>
+            </li>
+            <li><a href="./preorder.html">PRE-ORDER</a></li>
+        </ul>
+        <ul class="right">
+            <li><a href="#" class="log">LOGIN</a></li>
+            <li><a href="#" class="reg">REGISTER</a></li>
+        </ul>
+    </div>
+    <div class="regis-bg">
+        <div class="popup-regis">
+            <div class="close-regis">&times;</div>
+            <div class="logor7">
+                <img src="../img/R6Logo/R7SiegeLogo.png" alt="">
+            </div>
+            <form action="">
+                <div class="email"><input type="text" placeholder="email" required></div>
+                <div class="password"><input type="text" placeholder="password" required></div>
+                <div class="username"><input type="text" placeholder="username" required></div>
+                <div class="address"><input type="text" placeholder="address" required></div>
+                <div class="checkbox">
+                    <input type="checkbox" id="mycheckbox" required>
+                    <label for="mycheckbox">I accept the Terms of Use of Ubipost</label>
+                </div>
+                <div class="submit-button">
+                    <a href=""><button>Submit</button></a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="login-bg">
+        <div class="popup-login">
+            <div class="close-login">&times;</div>
+            <div class="logor7">
+                <img src="../img/R6Logo/R7SiegeLogo.png" alt="">
+            </div>
+            <form action="">
+                <div class="username"><input type="text" placeholder="username" required></div>
+                <div class="password"><input type="text" placeholder="password" required></div>
+                <div class="checkbox">
+                    <input type="checkbox" id="mycheckbox">
+                    <label for="mycheckbox">Remember me</label>
+                </div>
+                <div class="submit-button">
+                    <a href=""><button>Submit</button></a>
+                </div>
+                <div class="anotherway-login">
+                    <h3>Or login with</h3>
+                </div>
+                <div class="anotherway-login-img">
+                    <a href="https://www.facebook.com/"><img src="../img/social-media-icon/facebook.png" alt=""></a>
+                    <a href="https://twitter.com/"><img src="../img/social-media-icon/twitter.png" alt=""></a>
+                    <a href="https://www.twitch.tv/"><img src="../img/social-media-icon/twitch.png" alt=""></a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="title">
+        <h1>PRE-ORDER YOUR GAME NOW !</h1>
+    </div>
+    <div class="big-container">
+        <div class="container-platform">
+            <h2>CHOOSE YOUR PLATFORM</h2>
+            <div class="platform" id="platform-pc" onclick="cekClickPlatform(this.id)">
+                <div class="image-1">
+                    <img id="pc" src="../img/license-partner/PC.png" alt="">
+                </div>
+            </div>
+            <div class="platform" id="platform-ps4" onclick="cekClickPlatform(this.id)">
+                <div class="image-2">
+                    <img id="ps4" src="../img/license-partner/ps4logo.png" alt="">
+                </div>
+            </div>
+            <div class="platform" id="platform-xbox" onclick="cekClickPlatform(this.id)">
+                <div class="image-3">
+                    <img id="xbox" src="../img/license-partner/XboxLogo.png" alt="">
+                </div>
+            </div>
+        </div>  
+        <form action="" id="myform">
+            <div class="container-form">
+                <div class="form" id="form-name">
+                    <input placeholder=" " type="text" id="name" autocomplete="off" onkeyup="validationName()" required>
+                    <label for="name" class="label-name">
+                        <span class="content-name">Username</span>
+                    </label>
+                </div>
+                <span id="error-msg-name"></span>
+                <div class="form" id="form-email">
+                    <input placeholder=" " type="text" id="email" autocomplete="off" onkeyup="validationEmail()" required>
+                    <label for="email" class="label-name">
+                        <span class="content-name">email</span>
+                    </label>
+                </div>
+                <span id="error-msg-email"></span>
+                <div class="form" id="form-password">
+                    <input placeholder=" " type="password" id="password" autocomplete="off" onkeyup="validationPassword()" required>
+                    <label for="password" class="label-name">
+                        <span class="content-name">password</span>
+                    </label>
+                </div>
+                <span id="error-msg-password"></span>
+                <div class="form" id="form-address">
+                    <input placeholder=" " type="text" id="address" autocomplete="off" onkeyup="validationAddress()" required>
+                    <label for="address" class="label-name">
+                        <span class="content-name">address</span>
+                    </label>
+                </div>
+                <span id="error-msg-address"></span>
+                <div class="form" id="form-copies">
+                    <input placeholder=" " type="text" id="copies" autocomplete="off" onkeyup="validationCopies()" required>
+                    <label for="copies" class="label-name">
+                        <span class="content-name">number of copies</span>
+                    </label>
+                </div>
+                <span id="error-msg-copies"></span><br>
+                <div class="list invalid" id="form-list">
+                    <label for="list-game">Choose type of the game:</label>
+                    <select name="list-game" id="list-game" required onclick="validateList()">
+                    <option disabled selected value> -- select an option -- </option>
+                    <option value="1">Rainbow Seven Siege</option>
+                    <option value="2">Rainbow Seven Quarantine</option>
+                    </select>
+                </div>  
+                <div class="tos invalid" id="form-checkbox">
+                    <input type="checkbox" id="checkbox" name="terms" value="one" required onclick="validateCheckbox()">
+                    <label for="checkbox"> I agree to the terms and agreement </label>
+                </div>
+                <div class="preorder-button">
+                    <input type="submit" value="Pre-Order">
+                </div>
+            </div>
+        </form>
+    </div>
+    <br><br>
+    <div class="footerPart">
+        <div class="part1">
+            <h3>[ OUR SOCIAL MEDIA ]</h3>
+            <div class="socialMedia">
+                <a href="https://twitter.com/"><img class="twitter" src="../img/social-media-icon/twitter.png" alt=""></a>
+                <a href="https://facebook.com"><img class="facebook" src="../img/social-media-icon/facebook.png" alt=""></a>
+                <a href="https://instagram.com/"><img class="instagram" src="../img/social-media-icon/instagram.png" alt=""></a>
+                <a href="https://twitch.tv/"><img class="twitch" src="../img/social-media-icon/twitch.png" alt=""></a>
+            </div>
+        </div>
+        <div class="part2">
+            <div class="license">
+                <a href="https://www.esrb.org/EPCConfirm/912/"><img class="" src="../img/license-partner/license.png" alt=""></a>
+                <a href="https://www.esrb.org/ratings-guide/"><img class="" src="../img/license-partner/esrb.png" alt=""></a>
+            </div>
+            <div class="partner">
+                    <a href="https://www.playstation.com/en-id/"><img src="../img/license-partner/ps4Logo.png" alt=""></a>
+                    <a href="https://www.pcdigital.com.mx/"><img src="../img/license-partner/PcLogo.png" alt=""></a>
+                    <a href="https://www.xbox.com/en-WW/"><img src="../img/license-partner/XboxLogo.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="Cpborder">
+        <p>© 2015 Ubipost Entertainment. All Rights Reserved. Tom Clancy’s, Rainbow Seven, The Soldier Icon, Ubipost and the Ubipost logo are registered or unregistered trademarks of Ubipost Entertainment in the U.S. and/or other countries.</p>
+    </div>
+    <br>
+    <script src="../jquery.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

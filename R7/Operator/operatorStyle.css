@@ -1,0 +1,655 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient( rgba(0, 0, 0, 0.513), rgba(0, 0, 0, 0.513) ), url('../img/background/nightBg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.logoBg{
+    background-color: rgb(22, 22, 22);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    opacity: 0.95;
+}
+.logo img{
+    display: block;
+    margin: auto;
+    width: 7vw;
+}
+
+.navbar{
+    opacity: 0.95;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 6vw;
+    z-index: 50;
+}
+
+
+.navbar a{
+    color: white;
+    background: black;
+    height: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.navbar li{
+    list-style: none;
+    width: 100%;
+}
+
+.left{
+    float: left;
+    width: 70%;
+}
+
+.right{
+    float: right;
+    width: 30%;
+}
+.left .dropdowniconX .iconX img{
+    display: flex;
+    align-items: center;
+    width: 3vw;
+    filter: invert(1);
+}
+.navbar a:hover{
+    background-color: lightblue;
+    color: black;
+    transition: 0.3s;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.left li ul{
+    transition: opacity 0.3s ease-in;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 17.5%;
+}
+
+.left li:hover ul{
+    opacity: 1;
+    height: auto;
+    display: block;
+}
+.titleOp{
+    pointer-events: none;
+    text-align: center;
+    padding-top: 10vw;
+    font-size: 2vw;
+    color: white;
+}
+
+.login-bg, .regis-bg{
+    position: fixed;
+    z-index: 60; 
+    left: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow: hidden;
+}
+.popup-login, .popup-regis{
+    width: 30vw;
+    height: 45vw;
+    background-color: rgb(44, 42, 42);
+    margin: auto;
+    position: relative;
+    box-shadow: 20px 20px 10px rgb(0, 0, 0);
+}
+.logor7{
+    margin-top: 3.5vw;
+    text-align: center;
+}
+.logor7 img{
+    width: 12vw;
+}
+.popup-login input, .popup-regis input{
+    width: 80%;
+    height: 2.5vw;
+    outline: none;
+    font-size: 1.5vw;
+    border: none;
+}
+.username, .password, .address, .email{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vw;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    font-size: 1.3vw;
+}
+.checkbox input{
+    width: 1.3vw;
+}
+.checkbox label{
+    color: white;
+    padding-left: 1vw;
+}
+.submit-button{
+    padding-top: 1vw;
+    width: 80%;
+    margin: auto;
+}
+.submit-button button{
+    width: 100%;
+    height: 3vw;
+    cursor: pointer;
+    font-size: 2vw;
+    letter-spacing: 0.5vw;
+    font-weight: 550;
+    border: none;
+    transition: 0.3s;
+}
+.submit-button button:hover{
+    background-color: black;
+    color: white;
+    border: 2px solid lightblue;
+}
+.close-login, .close-regis{
+    position: absolute;
+    right: 1vw;
+    font-size: 4vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-login:hover, .close-regis:hover{
+    color: red;
+}
+.anotherway-login{
+    padding-top: 1vw;
+    margin: 2vw;
+    pointer-events: none;
+    font-size: 1.6vw;
+    text-align: center;
+    color: white;
+}
+.anotherway-login-img{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.anotherway-login-img img:hover{
+    filter: invert(1);
+}
+
+.container{
+    padding-top: 5vw;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-items: flex-start;
+}
+
+.container-op{
+    position: relative;
+    width: 15vw;
+    height: 24.8vw;
+    border: 0.2vw solid black;
+    background-color: rgb(34, 32, 32);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.container-op:active{
+    background-color: red;
+}
+.container-op:hover{
+    z-index: 20;
+    border-color: lightblue;
+    transform: scale(1.1);
+}
+.container-op:hover .name-op, .container-op:hover .side-op{
+    background-color: rgba(173, 216, 230, 0.884);
+    color: black;
+}
+.container-op img{
+    position: absolute;
+    width: 14.5vw;
+}
+.name-op, .side-op{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.884);
+    color: white;
+    width: 100%;
+    z-index: 1;
+    height: 4.5vw;
+    letter-spacing: 0.2vw;
+}
+
+.side-op{
+    justify-content: center;
+    bottom: 0;
+    font-size: 0.9vw;
+}
+
+.name-op h1{
+    font-size: 2.3vw;
+    padding-left: 0.5vw;
+}
+.name-op img{
+    right: 0.5vw;
+    width: 4vw;
+}
+
+.container-detail-iana, .container-detail-oryx, .container-detail-wamai, .container-detail-amaru, .container-detail-goyo{
+    background: linear-gradient( rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.425) ), url('../img/background/swordBg.jpg') 50% 100px no-repeat fixed;
+    background-size: cover;
+    margin-top: 5vw;
+    height: 150vw;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    justify-content: center;
+    position: relative;
+}
+.container-detail-iana, .container-detail-oryx, .container-detail-wamai, .container-detail-amaru, .container-detail-goyo{
+    display: none;
+}
+
+.box-detail-op{
+    position: absolute;
+    left: 25vw;
+    top: 7vw;
+    width: 50%;
+    background-color: rgba(128, 128, 128, 0.192);
+    height: 30vw;
+    color: white;
+    pointer-events: none;
+}
+.top-content{
+    height: 14vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-content h1{
+    padding-left: 3vw;
+    display: flex;
+    align-items: center;
+    font-size: 4vw;
+}
+.top-content .flag{
+    position: relative;
+    width: 6vw;
+    margin: 2vw;
+}
+.top-content img{
+    width: 11vw;
+    margin-right: 2vw;
+}
+
+.middle-content {
+    text-align: center;
+}
+.box-detail-op .middle-content h2{
+    font-size: 3vw;
+    color: lightblue;
+}
+.middle-content hr{
+    width: 45vw;
+    margin: auto;
+    margin-top: 1vw;
+}
+.middle-content h4{
+    text-align: center;
+    font-size: 2vw;
+    font-style: italic;
+}
+
+.bottom-content{
+    display: flex;
+    width: 100%;
+    padding-top: 1vw;
+    height: 9vw;
+    font-size: 1.5vw;
+}
+.bottom-content h1{
+    width: 100%;
+    text-align: center;
+    color: lightblue;
+}
+.bar-armor, .speed-armor{
+    justify-content: center;
+    width: 50%;
+    position: absolute;
+    display: flex;
+    bottom: 2vw;
+    text-align: center;
+}
+.bar, .bar1, .bar2, .barv1, .bar1v1, .bar2v1{
+    width: 6vw;
+    margin: 0.7vw;
+    height: 0.5vw;
+    background-color: lightblue;
+    border: 2px solid lightblue;
+    top: 30vw;
+} 
+.bar2, .bar2v1{
+    background-color: black;
+}
+
+.abilities{
+    position: absolute;
+    top: 41vw;
+    color: white;
+    letter-spacing: 0.1vw;
+}
+.abilities h1{
+    color: lightblue;
+}
+.abilities-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 1vw;
+}
+.ability-video-thumbnail, .ability-video-thumbnail2 , .ability-video-thumbnail3{
+    transition: 0.3s;
+}
+.ability-video-thumbnail img, .ability-video-thumbnail2 img, .ability-video-thumbnail3 img {
+    width: 20vw;
+    transition: 0.3s;
+}
+.abilities-content .play-button{
+    position: absolute;
+    width: 5vw;
+    right: 19vw;
+    pointer-events: none;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.ability-video-thumbnail:hover +.play-button, .ability-video-thumbnail2:hover +.play-button, .ability-video-thumbnail3:hover +.play-button{
+    transform: scale(1.2,1.2);
+}
+.ability-video-thumbnail:hover, .ability-video-thumbnail2:hover, .ability-video-thumbnail3:hover{
+    transform: scale(1.2,1.2);
+}
+.ability-video-thumbnail:hover img, .ability-video-thumbnail2:hover img, .ability-video-thumbnail3:hover img{
+    border: 2px solid lightblue;
+}
+.abilities h1{
+    text-align: center;
+    font-size: 3vw;
+    pointer-events: none;
+}
+.abilities p{
+    pointer-events: none;
+    width: 45%;
+    float: left;
+    font-size: 1.3vw;
+}
+.container-detail-wamai .abilities-content p, .container-detail-amaru .abilities-content p, .container-detail-goyo .abilities-content p{
+    font-size: 1.6vw;
+}
+#ability-video, #ability-video2, #ability-video3{
+    position: fixed;
+    z-index: 99;
+}
+#video .close, #video2 .close, #video3 .close{
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
+    top: 6vw;
+    right: 3vw;
+    font-size: 4vw;
+    font-weight: bolder;
+    color: white;
+}
+#video .close:hover, #video2 .close:hover, #video3 .close:hover{
+    color: red;
+}
+.main-weapon, .secondary-weapon, .gadget, .unique-ability{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: lightblue;
+    width: 23vw;
+    cursor: crosshair;
+    position: absolute;
+    z-index: 15;
+    top: 1vw;
+}
+.main-weapon{
+    left: 2vw;
+}
+.secondary-weapon{
+    left: 26vw;
+}
+.gadget{
+    left: 50vw;
+}
+.unique-ability{
+    left: 74vw;
+}
+.container-detail-iana h1, .container-detail-oryx h1, .container-detail-wamai h1, .container-detail-amaru h1, .container-detail-goyo h1{
+    font-size: 2.2vw;
+}
+.container-detail-iana h2, .container-detail-oryx h2, .container-detail-wamai h2, .container-detail-amaru h2, .container-detail-goyo h2{
+    font-size: 1.8vw;
+    color: white;
+}
+.weapon{
+    border: 1px solid lightblue;
+    background-color: black;
+}
+.item-1, .item-2, .item-3, .item-4{
+    display: none;
+}
+.weapon img{
+    width: 20vw;
+}
+.hide-button{
+    text-align: center;
+    padding-top: 4vw;
+    display: none;
+    outline: none;
+}
+.hide-button button{
+    padding: 1vw 2.5vw;
+    font-size: 2vw;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: 2px solid lightblue;
+    transition: 0.3s;
+}
+.hide-button button:hover{
+    background-color: lightblue;
+    color: black;
+}
+
+.bio{
+    position: absolute;
+    top: 65vw;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.profile{
+    padding-top: 2vw;
+    display: flex;
+    text-align: left;
+    justify-content: space-evenly;
+    pointer-events: none;
+}
+.bio h1{
+    font-size: 3vw;
+    color: lightblue;
+    pointer-events: none;
+}
+
+.head{
+    width: 25vw;
+    background-color: rgba(12, 12, 12, 0.719)
+}
+.head h2{
+    font-size: 1.7vw;
+    color: lightblue;
+}
+.head h3{
+    font-size: 2vw;
+}
+.text-bio{
+    padding-top: 3vw;
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    pointer-events: none;
+}
+.text-bio h1{
+    font-size: 1.9vw;
+}
+.text-bio h3{
+    font-weight: bolder;
+    font-size: 1.7vw;
+}
+.text-bio p{
+    font-weight: lighter;
+    font-size: 1.3vw;
+}
+
+.footerPart{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 10vw;
+}
+
+.socialMedia{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.part1 .socialMedia .twitter,
+.part1 .socialMedia .facebook,
+.part1 .socialMedia .twitch,
+.part1 .socialMedia .instagram{
+    padding: 1px 1px;
+    border: 1px solid transparent;
+    transition: 0.3s ease-in;
+    height: 50px;
+}
+
+.part1 .socialMedia .twitter:hover,
+.part1 .socialMedia .instagram:hover,
+.part1 .socialMedia .facebook:hover,
+.part1 .socialMedia .twitch:hover{
+    transform: scale(1.3);
+    border: 1px solid lightblue;
+}
+
+.part1 h3{
+    color: white;
+    font-size: 35px;
+    pointer-events: none;
+}
+
+.part2{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.part2 .license, .part2 .partner{
+    display: flex;
+    justify-content: space-around;
+}
+
+.part2 .license img:hover, .part2 .partner img:hover{
+    filter: brightness(70%);
+}
+
+.Cpborder{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    height: 100px;
+    
+    width: 80%;
+    margin: auto;
+    position: relative;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+}
+
+.Cpborder p{
+    position: absolute;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px){
+    .footerPart{
+        flex-direction: column;
+    }
+    .part1 h3{
+        font-size: 20px;
+    }
+    .part1 .socialMedia .twitter,
+    .part1 .socialMedia .facebook,
+    .part1 .socialMedia .twitch,
+    .part1 .socialMedia .instagram{
+        height: 40px;
+    }
+    .part2{
+        padding-top: 30px;
+    }
+    .license, .partner{
+        flex-direction: column;
+        align-items: center;
+    }
+    .Cpborder{
+        margin-top: 10px;
+    }
+    .Cpborder p{
+        font-size: 12px;
+    }
+    .part2 img{
+        height: 75px;
+    }
+}
+@media screen and (max-width: 1100px){
+    .container-detail-iana, .container-detail-oryx, .container-detail-wamai, .container-detail-amaru, .container-detail-goyo{
+        height: 170vw;
+    }
+}
+@media screen and (max-width: 700px){
+    .container-detail-iana, .container-detail-oryx, .container-detail-wamai, .container-detail-amaru, .container-detail-goyo{
+        height: 180vw;
+    }
+}
